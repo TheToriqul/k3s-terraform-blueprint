@@ -195,7 +195,7 @@ resource "aws_security_group" "k3s" {
 # Key Pair
 resource "aws_key_pair" "k3s_key" {
   key_name   = "k3s-key"
-  public_key = file("~/.ssh/id_rsa.pub")
+  public_key = file("~/.ssh/id_rsa.pub")  #Have to use the public key and change key directory to your own directory.
 }
 
 # NGINX Load Balancer Instance
